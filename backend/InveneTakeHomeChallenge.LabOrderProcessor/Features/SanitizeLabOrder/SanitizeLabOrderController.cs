@@ -16,7 +16,7 @@ public class SanitizeLabOrderController :  ControllerBase
     /// <summary>
     /// API for sanitizing a Lab Order. Assuming only .txt files are allowed.
     /// </summary>
-    /// <param name="labOrder">The lab order file to sanitize, provided as an IFormFile.</param>
+    /// <param name="labOrders">The lab order files to sanitize, provided as a List of IFormFile.</param>
     /// <returns>
     ///   <para>
     ///     <see cref="OkResult"/> (200 OK) if the file was successfully sanitized and processed.
