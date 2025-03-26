@@ -29,18 +29,26 @@ public class SanitizeLabOrderController :  ControllerBase
     ///   </para>
     /// </returns>
     [HttpPost]
-    public async Task<IActionResult> SanitizeLabOrder(IFormFile labOrder)
+    public async Task<IActionResult> SanitizeLabOrder(List<IFormFile> labOrders)
     {
-        if (labOrder == null || labOrder.Length == 0)
-            return BadRequest("No file uploaded or file is empty.");
+        if (labOrders == null || labOrders.Count == 0)
+            return BadRequest("No file(s) uploaded.");
 
-        // Assuming only .txt files are valid input type
-        if (Path.GetExtension(labOrder.FileName).ToLower() != ".txt")
-            return BadRequest("Only .txt files are allowed.");
+        foreach (var labOrder in labOrders)
+        {
+            if (labOrder.Length == 0)
+                return BadRequest("One or more files are empty.");
+
+            // Assuming only .txt files are valid input type
+            if (Path.GetExtension(labOrder.FileName).ToLower() != ".txt")
+                return BadRequest("Only .txt files are allowed.");
+        }
         
         try
         {
-            await _sanitizeLabOrderHandler.SanitizeLabOrder(labOrder);
+            foreach (var labOrder in labOrders)
+                await _sanitizeLabOrderHandler.SanitizeLabOrder(labOrder);
+            
             return Ok();
         }
         catch (Exception ex)

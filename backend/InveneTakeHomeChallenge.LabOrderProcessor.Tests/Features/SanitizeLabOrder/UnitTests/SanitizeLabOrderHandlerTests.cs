@@ -3,7 +3,7 @@ using InveneTakeHomeChallenge.LabOrderProcessor.Features.SanitizeLabOrder;
 using Microsoft.AspNetCore.Http;
 using Moq;
 
-namespace InveneTakeHomeChallenge.LabOrderProcessor.Tests.Features.SanitizeLabOrder;
+namespace InveneTakeHomeChallenge.LabOrderProcessor.Tests.Features.SanitizeLabOrder.UnitTests;
 
 public class SanitizeLabOrderHandlerTests
 {

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace InveneTakeHomeChallenge.LabOrderProcessor.Tests.Features.SanitizeLabOrder;
+namespace InveneTakeHomeChallenge.LabOrderProcessor.Tests.Features.SanitizeLabOrder.UnitTests;
 
 public class SanitizeLabOrderControllerTests
 {
@@ -16,7 +16,7 @@ public class SanitizeLabOrderControllerTests
         // Arrange
         var controller = new SanitizeLabOrderController(_sanitizeLabOrderHandlerMock.Object);
         
-        var expectedErrorMessage = "No file uploaded or file is empty.";
+        var expectedErrorMessage = "No file(s) uploaded.";
         
         // Act
         var result = await controller.SanitizeLabOrder(null);
@@ -35,10 +35,10 @@ public class SanitizeLabOrderControllerTests
         
         var controller = new SanitizeLabOrderController(_sanitizeLabOrderHandlerMock.Object);
 
-        var expectedErrorMessage = "No file uploaded or file is empty.";
+        var expectedErrorMessage = "One or more files are empty.";
 
         // Act
-        var result = await controller.SanitizeLabOrder(fileMock.Object);
+        var result = await controller.SanitizeLabOrder(new List<IFormFile>() { fileMock.Object });
 
         // Assert
         var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
@@ -58,7 +58,7 @@ public class SanitizeLabOrderControllerTests
         var expectedErrorMessage = "Only .txt files are allowed.";
 
         // Act
-        var result = await controller.SanitizeLabOrder(fileMock.Object);
+        var result = await controller.SanitizeLabOrder(new List<IFormFile>() { fileMock.Object });
 
         // Assert
         var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
@@ -79,7 +79,7 @@ public class SanitizeLabOrderControllerTests
         var controller = new SanitizeLabOrderController(_sanitizeLabOrderHandlerMock.Object);
 
         // Act
-        var result = await controller.SanitizeLabOrder(fileMock.Object);
+        var result = await controller.SanitizeLabOrder(new List<IFormFile>() { fileMock.Object });
 
         // Assert
         Assert.IsType<OkResult>(result);
@@ -111,7 +111,7 @@ public class SanitizeLabOrderControllerTests
         };
 
         // Act
-        var result = await controller.SanitizeLabOrder(fileMock.Object);
+        var result = await controller.SanitizeLabOrder(new List<IFormFile>() { fileMock.Object });
 
         // Assert
         var problemResult = Assert.IsType<ObjectResult>(result);

@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const apiUrl = 'https://localhost:7040';
 
 export default function Home() {
-  const [labOrder, setLabOrder] = useState<File>();
+  const [labOrders, setLabOrders] = useState<FileList>();
   const [submitDisabled, setSubmitDisabled] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
   const [snackbarProps, setSnackbarProps] = useState({
@@ -19,17 +19,19 @@ export default function Home() {
   })
 
   useEffect(() => {
-    if (labOrder)
+    if (labOrders)
       setSubmitDisabled(false);
     else 
       setSubmitDisabled(true);
-  }, [labOrder])
+  }, [labOrders])
 
   const handleSubmit = () => {
     setLoading(true);
 
-    let data = new FormData();
-    data.append('labOrder', labOrder!);
+    const data = new FormData();
+    for (let i = 0; i < labOrders!.length; i++) {
+      data.append("labOrders", labOrders![i]);
+    }
 
     axios.post(`${apiUrl}/SanitizeLabOrder`, data, { 
       headers: {
@@ -79,8 +81,9 @@ export default function Home() {
         <input
           type='file'
           accept='.txt'
+          multiple
           id='attendeeInput'
-          onChange={(e) => setLabOrder(e.target.files![0])}/>
+          onChange={(e) => setLabOrders(e.target.files!)}/>
       </Box>
       <Button 
         variant="contained" 
