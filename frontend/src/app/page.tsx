@@ -6,6 +6,8 @@ import { Box, Button, SnackbarCloseReason, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+const apiUrl = 'https://localhost:7040';
+
 export default function Home() {
   const [labOrder, setLabOrder] = useState<File>();
   const [submitDisabled, setSubmitDisabled] = useState<boolean>(true);
@@ -26,12 +28,10 @@ export default function Home() {
   const handleSubmit = () => {
     setLoading(true);
 
-    const apiUrl = 'https://localhost:7040';
-
     let data = new FormData();
     data.append('labOrder', labOrder!);
 
-    axios.post(`https://localhost:7040/SanitizeLabOrder`, data, { 
+    axios.post(`${apiUrl}/SanitizeLabOrder`, data, { 
       headers: {
         'Content-Type': 'multipart/form-data', 
       }
