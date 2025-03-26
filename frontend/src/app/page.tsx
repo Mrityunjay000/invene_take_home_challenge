@@ -50,7 +50,7 @@ export default function Home() {
       setSnackbarProps({
         open: true,
         severity: SnackbarSeverityLevels.error,
-        message: err.response ? err.response.data.message : err.message
+        message: err.response ? err.response.data : err.message
       })
     })
   }

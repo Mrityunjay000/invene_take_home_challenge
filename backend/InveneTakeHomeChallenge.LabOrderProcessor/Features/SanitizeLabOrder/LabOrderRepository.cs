@@ -1,4 +1,4 @@
-namespace LabOrderProcessor.Features.SanitizeLabOrder;
+namespace InveneTakeHomeChallenge.LabOrderProcessor.Features.SanitizeLabOrder;
 
 public class LabOrderRepository : ILabOrderRepository
 {

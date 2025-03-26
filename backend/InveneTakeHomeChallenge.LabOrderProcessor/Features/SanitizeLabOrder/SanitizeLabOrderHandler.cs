@@ -1,7 +1,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace LabOrderProcessor.Features.SanitizeLabOrder;
+namespace InveneTakeHomeChallenge.LabOrderProcessor.Features.SanitizeLabOrder;
 
 public class SanitizeLabOrderHandler : ISanitizeLabOrderHandler
 {

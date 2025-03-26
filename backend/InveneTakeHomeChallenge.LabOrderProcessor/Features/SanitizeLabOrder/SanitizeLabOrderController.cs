@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace LabOrderProcessor.Features.SanitizeLabOrder;
+namespace InveneTakeHomeChallenge.LabOrderProcessor.Features.SanitizeLabOrder;
 
 [ApiController]
 [Route("[controller]")]

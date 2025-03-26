@@ -1,9 +1,9 @@
 using System.Text;
-using LabOrderProcessor.Features.SanitizeLabOrder;
+using InveneTakeHomeChallenge.LabOrderProcessor.Features.SanitizeLabOrder;
 using Microsoft.AspNetCore.Http;
 using Moq;
 
-namespace LabOrderProcessor.Tests.Features.SanitizeLabOrder;
+namespace InveneTakeHomeChallenge.LabOrderProcessor.Tests.Features.SanitizeLabOrder;
 
 public class SanitizeLabOrderHandlerTests
 {

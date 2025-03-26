@@ -1,0 +1,10 @@
+Name: John Doe
+DoB: 01/23/1980
+SSN: 123-45-6789
+Home Address: 123 Main St, Anytown, USA
+Number: (555) 123-4567
+Email Address: john.doe@example.com
+Medical Record Number: MRN-0012345
+Order Details:
+- Complete Blood Count (CBC)
+- Comprehensive Metabolic Panel (CMP)

@@ -1,0 +1,3 @@
+Order Details:
+- Complete Blood Count (CBC)
+- Comprehensive Metabolic Panel (CMP)

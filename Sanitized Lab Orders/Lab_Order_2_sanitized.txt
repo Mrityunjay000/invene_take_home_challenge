@@ -1,0 +1,10 @@
+Name: [REDACTED]
+DoB: [REDACTED]
+SSN: [REDACTED]
+Home Address: [REDACTED]
+Number: [REDACTED]
+Email Address: [REDACTED]
+Medical Record Number: [REDACTED]
+Order Details:
+- Complete Blood Count (CBC)
+- Comprehensive Metabolic Panel (CMP)

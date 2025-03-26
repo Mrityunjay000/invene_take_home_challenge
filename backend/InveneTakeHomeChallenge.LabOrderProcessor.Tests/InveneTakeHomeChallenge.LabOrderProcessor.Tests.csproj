@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\LabOrderProcessor\LabOrderProcessor.csproj" />
+      <ProjectReference Include="..\InveneTakeHomeChallenge.LabOrderProcessor\InveneTakeHomeChallenge.LabOrderProcessor.csproj" />
     </ItemGroup>
 
 </Project>

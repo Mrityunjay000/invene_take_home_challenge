@@ -1,0 +1,6 @@
+BadPHI: John Doe
+BadPHI: 01/23/1980
+BadPHI: 123-45-6789
+BadPHI: 123 Main St, Anytown, USA
+BadPHI: (555) 123-4567
+BadPHI: john.doe@example.com

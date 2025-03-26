@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabOrderProcessor", "LabOrderProcessor\LabOrderProcessor.csproj", "{B59FE1F6-87EF-4969-B564-9D86ADF3C5BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InveneTakeHomeChallenge.LabOrderProcessor", "InveneTakeHomeChallenge.LabOrderProcessor\InveneTakeHomeChallenge.LabOrderProcessor.csproj", "{B59FE1F6-87EF-4969-B564-9D86ADF3C5BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabOrderProcessor.Tests", "LabOrderProcessor.Tests\LabOrderProcessor.Tests.csproj", "{5726DC00-56FA-4D50-B9AE-4459B17C2971}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InveneTakeHomeChallenge.LabOrderProcessor.Tests", "InveneTakeHomeChallenge.LabOrderProcessor.Tests\InveneTakeHomeChallenge.LabOrderProcessor.Tests.csproj", "{5726DC00-56FA-4D50-B9AE-4459B17C2971}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

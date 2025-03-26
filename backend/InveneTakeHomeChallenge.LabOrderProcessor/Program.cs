@@ -1,4 +1,4 @@
-using LabOrderProcessor.Features.SanitizeLabOrder;
+using InveneTakeHomeChallenge.LabOrderProcessor.Features.SanitizeLabOrder;
 
 var builder = WebApplication.CreateBuilder(args);
 
