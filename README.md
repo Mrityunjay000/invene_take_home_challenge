@@ -18,6 +18,11 @@ After installing .NET 6
 2. Run `dotnet dev-certs https --trust` to generate a Developer certificate. Follow any prompts that may be displayed
 3. Run `dotnet run --project InveneTakeHomeChallenge.LabOrderProcessor` to build and start the API. Follow any prompts that may be displayed
 
+#### Running the Unit Tests
+
+1. Open terminal or command line and navigate to the `/backend` directory in this repo (where you have downloaded it)
+2. Run `dotnet test` to build and run the unit tests
+
 ### Frontend
 
 #### Installing Dependencies
@@ -32,7 +37,7 @@ The frontend requires Node v20.17.0 or higher. You can install it by following t
 
 ## Using the App
 
-The app provides a simple interface to select a lab order file (limited to `.txt` files only) and submit it for processing. Once processing is complete, you will recieve a success message. The sanitized file can be accessed under `path/to/this/repo/backend/InveneTakeHomeChallenge.LabOrderProcessor/bin/Deebug/net6.0/` named as `<filename>_sanitized.txt`. .NET's `AppDomain.CurrentDomain.BaseDirectory` is used to save the sanitized file so that the backend can run smoothly across multiple platforms.
+The app provides a simple interface to select a lab order file (limited to `.txt` files only) and submit it for processing. Test lab orders can be found in `/Test Lab Orders`. Once processing is complete, you will recieve a success message. The sanitized file can be accessed under `path/to/this/repo/backend/InveneTakeHomeChallenge.LabOrderProcessor/bin/Deebug/net6.0/` named as `<filename>_sanitized.txt`. .NET's `AppDomain.CurrentDomain.BaseDirectory` is used to save the sanitized file so that the backend can run smoothly across multiple platforms.
 
 ## Approach
 
