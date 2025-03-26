@@ -1,0 +1,114 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules
+**/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+**/coverage
+
+# next.js
+**/.next/
+**/out/
+
+# production
+**/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Ignore Visual Studio specific files
+.vs/
+.vscode/
+
+# Ignore build output
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore .NET Core runtime files
+project.lock.json
+project.fragment.lock.json
+*.ide
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+
+# Ignore log files
+*.log
+logs/
+
+# Ignore compiled binaries
+*.dll
+*.exe
+*.pdb
+
+# Ignore configuration files that may contain secrets
+appsettings.*.json
+secrets.json
+
+# Ignore EF Core migrations (optional)
+Migrations/
+
+# Ignore published output
+publish/
+wwwroot/
+
+# Ignore Rider IDE specific files
+.idea/
+*.iml
+
+# Ignore local database files
+*.mdf
+*.ldf
+sqlite.db
+
+# Ignore Docker-related files
+docker-compose.override.yml
+.env
+
+# Ignore ReSharper files
+*_Resharper.*
+
+# Ignore coverage reports
+coverage/
+*.coverlet/
+TestResults/
+
+# Ignore temporary files
+*.tmp
+*.cache
+*.swp
+
